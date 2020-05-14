@@ -1,5 +1,6 @@
 package net.corda.examples.carinsurance.webserver;
 
+import net.corda.core.identity.CordaX500Name;
 import net.corda.core.identity.Party;
 import net.corda.core.messaging.CordaRPCOps;
 import net.corda.examples.carinsurance.flows.ClaimInfo;
@@ -8,9 +9,12 @@ import net.corda.examples.carinsurance.flows.InsuranceInfo;
 import net.corda.examples.carinsurance.flows.IssueInsuranceFlow;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Set;
+
+import static org.springframework.http.MediaType.TEXT_PLAIN_VALUE;
 
 /**
  * Define your API endpoints here.
@@ -23,6 +27,7 @@ public class Controller {
 
     public Controller(NodeRPCConnection rpc) {
         this.proxy = rpc.proxy;
+
     }
 
     /*

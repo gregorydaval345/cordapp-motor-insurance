@@ -59,7 +59,7 @@ public class InsuranceClaimFlow {
             //Create the output state
             InsuranceState output = new InsuranceState(input.getPolicyNumber(), input.getInsuredValue(),
                     input.getDuration(), input.getPremium(), input.getInsurer(), input.getInsuree(),
-                    input.getVehicleDetail(), claims);
+                    input.getVehicleState(), claims);
 
             // Build the transaction.
             TransactionBuilder transactionBuilder = new TransactionBuilder(inputStateAndRef.getState().getNotary())

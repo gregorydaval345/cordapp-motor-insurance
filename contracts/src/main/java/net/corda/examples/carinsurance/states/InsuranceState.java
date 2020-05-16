@@ -26,7 +26,7 @@ public class InsuranceState implements QueryableState {
 
     // Represents the asset which is insured.
     // This will be used to demonstrate one-to-one relationship
-    private final VehicleDetail vehicleDetail;
+    private final VehicleState vehicleState;
 
     // Fields related to the insurance state.
     private final String policyNumber;
@@ -42,14 +42,14 @@ public class InsuranceState implements QueryableState {
     private final List<Claim> claims;
 
     public InsuranceState(String policyNumber, long insuredValue, int duration, int premium, Party insurer,
-                     Party insuree, VehicleDetail  vehicleDetail, List<Claim> claims) {
+                          Party insuree, VehicleState vehicleState, List<Claim> claims) {
         this.policyNumber = policyNumber;
         this.insuredValue = insuredValue;
         this.duration = duration;
         this.premium = premium;
         this.insurer = insurer;
         this.insuree = insuree;
-        this.vehicleDetail = vehicleDetail;
+        this.vehicleState = vehicleState;
         this.claims = claims;
     }
 
@@ -84,14 +84,14 @@ public class InsuranceState implements QueryableState {
                     this.insuredValue,
                     this.duration,
                     this.premium,
-                    this.vehicleDetail==null ? null : new PersistentVehicle(
-                            vehicleDetail.getRegistrationNumber(),
-                            vehicleDetail.getChasisNumber(),
-                            vehicleDetail.getMake(),
-                            vehicleDetail.getModel(),
-                            vehicleDetail.getVariant(),
-                            vehicleDetail.getColor(),
-                            vehicleDetail.getFuelType()
+                    this.vehicleState ==null ? null : new PersistentVehicle(
+                            vehicleState.getRegistrationNumber(),
+                            vehicleState.getChasisNumber(),
+                            vehicleState.getMake(),
+                            vehicleState.getModel(),
+                            vehicleState.getVariant(),
+                            vehicleState.getColor(),
+                            vehicleState.getFuelType()
                     ),
                     this.claims == null? null: persistentClaims
             );
@@ -141,8 +141,8 @@ public class InsuranceState implements QueryableState {
         return insuree;
     }
 
-    public VehicleDetail getVehicleDetail() {
-        return vehicleDetail;
+    public VehicleState getVehicleState() {
+        return vehicleState;
     }
 
     public List<Claim> getClaims() {

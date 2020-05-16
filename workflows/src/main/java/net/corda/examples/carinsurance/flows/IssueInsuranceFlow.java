@@ -9,7 +9,7 @@ import net.corda.core.transactions.TransactionBuilder;
 import net.corda.core.utilities.ProgressTracker;
 import net.corda.examples.carinsurance.contracts.InsuranceContract;
 import net.corda.examples.carinsurance.states.InsuranceState;
-import net.corda.examples.carinsurance.states.VehicleDetail;
+import net.corda.examples.carinsurance.states.VehicleState;
 
 public class IssueInsuranceFlow {
 
@@ -41,13 +41,13 @@ public class IssueInsuranceFlow {
             Party insurer = getOurIdentity();
 
             VehicleInfo vehicleInfo = insuranceInfo.getVehicleInfo();
-            VehicleDetail vehicleDetail = new VehicleDetail(vehicleInfo.getRegistrationNumber(),
-                    vehicleInfo.getChasisNumber(), vehicleInfo.getMake(), vehicleInfo.getModel(),
+            VehicleState vehicleState = new VehicleState(vehicleInfo.getRegistrationNumber(),
+                    vehicleInfo.getChasisNumber(), vehicleInfo.getLicensePlateNumber(), vehicleInfo.getMake(), vehicleInfo.getModel(),
                     vehicleInfo.getVariant(), vehicleInfo.getColor(), vehicleInfo.getFuelType());
 
             // Build the insurance output state.
             InsuranceState insurance = new InsuranceState(insuranceInfo.getPolicyNumber(), insuranceInfo.getInsuredValue(),
-                    insuranceInfo.getDuration(), insuranceInfo.getPremium(), insurer, insuree, vehicleDetail,
+                    insuranceInfo.getDuration(), insuranceInfo.getPremium(), insurer, insuree, vehicleState,
                     null);
 
             // Build the transaction

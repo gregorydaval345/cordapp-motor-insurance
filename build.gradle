@@ -113,6 +113,19 @@ task deployNodes(type: net.corda.plugins.Cordform, dependsOn: ['jar']) {
         }
         cordapps.clear()
     }
+    // TAJ / Department of Motor Vehicle
+    // Govering Body
+    node {
+        name "O=TAJ,L=London,C=GB"
+        p2pPort 10007
+        rpcSettings {
+            address("localhost:10007")
+            adminAddress("localhost:10047")
+        }
+        rpcUsers = [[ user: "user1", "password": "test", "permissions": ["ALL"]]]
+        extraConfig = ['h2Settings.address' : 'localhost:20047']
+    }
+    // Insurance Company
     node {
         name "O=Insurer,L=London,C=GB"
         p2pPort 10005
@@ -123,6 +136,7 @@ task deployNodes(type: net.corda.plugins.Cordform, dependsOn: ['jar']) {
         rpcUsers = [[ user: "user1", "password": "test", "permissions": ["ALL"]]]
         extraConfig = ['h2Settings.address' : 'localhost:20041']
     }
+    // Applicant aka First Owner
     node {
         name "O=Applicant,L=New York,C=US"
         p2pPort 10008
@@ -132,6 +146,18 @@ task deployNodes(type: net.corda.plugins.Cordform, dependsOn: ['jar']) {
         }
         rpcUsers = [[ user: "user1", "password": "test", "permissions": ["ALL"]]]
         extraConfig = ['h2Settings.address' : 'localhost:20042']
+    }
+    // Applicant is the First owner
+    // PartyB is the Second owner
+    node {
+        name "O=PartyB,L=New York,C=US"
+        p2pPort 10004
+        rpcSettings {
+            address("localhost:10004")
+            adminAddress("localhost:10044")
+        }
+        rpcUsers = [[ user: "user1", "password": "test", "permissions": ["ALL"]]]
+        extraConfig = ['h2Settings.address' : 'localhost:20044']
     }
     //Financial Institution
     node {

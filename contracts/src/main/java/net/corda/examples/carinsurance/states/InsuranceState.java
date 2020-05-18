@@ -85,7 +85,7 @@ public class InsuranceState implements QueryableState {
                     this.duration,
                     this.premium,
                     this.vehicleState ==null ? null : new PersistentVehicle(
-                            vehicleState.getRegistrationNumber(),
+                            vehicleState.getLicensePlateNumber(),
                             vehicleState.getChasisNumber(),
                             vehicleState.getMake(),
                             vehicleState.getModel(),

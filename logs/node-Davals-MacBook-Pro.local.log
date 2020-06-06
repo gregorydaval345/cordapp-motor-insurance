@@ -1,0 +1,32 @@
+[INFO ] 2020-05-12T02:32:34,186 [main] Starter - Starting Starter on Davals-MacBook-Pro.local with PID 36253 (/Users/davalgregory/development/queryablestate-carinsurance/clients/build/classes/java/main started by davalgregory in /Users/davalgregory/development/queryablestate-carinsurance)
+[INFO ] 2020-05-12T02:32:34,194 [main] Starter - No active profile set, falling back to default profiles: default
+[INFO ] 2020-05-12T02:32:34,262 [main] AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@34c01041: startup date [Mon May 11 21:32:34 EST 2020]; root of context hierarchy
+[INFO ] 2020-05-12T02:32:36,109 [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2020-05-12T02:32:36,129 [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-05-12T02:32:36,141 [main] StandardService - Starting service [Tomcat]
+[INFO ] 2020-05-12T02:32:36,142 [main] StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+[INFO ] 2020-05-12T02:32:36,147 [localhost-startStop-1] AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/davalgregory/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+[INFO ] 2020-05-12T02:32:36,341 [localhost-startStop-1] [/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2020-05-12T02:32:36,342 [localhost-startStop-1] ContextLoader - Root WebApplicationContext: initialization completed in 2081 ms
+[INFO ] 2020-05-12T02:32:36,530 [localhost-startStop-1] ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+[INFO ] 2020-05-12T02:32:36,536 [localhost-startStop-1] FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+[INFO ] 2020-05-12T02:32:36,537 [localhost-startStop-1] FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[INFO ] 2020-05-12T02:32:36,537 [localhost-startStop-1] FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[INFO ] 2020-05-12T02:32:36,537 [localhost-startStop-1] FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+[INFO ] 2020-05-12T02:32:41,649 [main] RPCClient - Startup took 1906 msec
+[INFO ] 2020-05-12T02:32:41,790 [main] SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 2020-05-12T02:32:42,105 [main] RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@34c01041: startup date [Mon May 11 21:32:34 EST 2020]; root of context hierarchy
+[INFO ] 2020-05-12T02:32:42,213 [main] RequestMappingHandlerMapping - Mapped "{[/vehicleInsurance/{insuree}],methods=[POST]}" onto private java.lang.String net.corda.examples.carinsurance.webserver.Controller.vehicleSale(net.corda.examples.carinsurance.flows.InsuranceInfo,java.lang.String)
+[INFO ] 2020-05-12T02:32:42,215 [main] RequestMappingHandlerMapping - Mapped "{[/vehicleInsurance/claim/{policyNumber}],methods=[POST]}" onto private java.lang.String net.corda.examples.carinsurance.webserver.Controller.claim(net.corda.examples.carinsurance.flows.ClaimInfo,java.lang.String)
+[INFO ] 2020-05-12T02:32:42,220 [main] RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[INFO ] 2020-05-12T02:32:42,221 [main] RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[INFO ] 2020-05-12T02:32:42,259 [main] SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 2020-05-12T02:32:42,259 [main] SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 2020-05-12T02:32:42,336 [main] WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+[INFO ] 2020-05-12T02:32:42,581 [main] AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+[INFO ] 2020-05-12T02:32:42,600 [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2020-05-12T02:32:42,624 [main] NioSelectorPool - Using a shared selector for servlet write/read
+[INFO ] 2020-05-12T02:32:42,646 [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] 2020-05-12T02:32:42,651 [main] Starter - Started Starter in 10.204 seconds (JVM running for 13.114)
+[INFO ] 2020-05-12T02:35:26,220 [Thread-24] AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@34c01041: startup date [Mon May 11 21:32:34 EST 2020]; root of context hierarchy
+[INFO ] 2020-05-12T02:35:26,227 [Thread-24] AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown

@@ -44,8 +44,8 @@ public class FlowTests {
                 "M3",
                 "MPower",
                 "Black",
-                "gas"
-        );
+                "gas",
+                applicant);
         InsuranceInfo policy1 = new InsuranceInfo(
                 "8742",
                 2000,

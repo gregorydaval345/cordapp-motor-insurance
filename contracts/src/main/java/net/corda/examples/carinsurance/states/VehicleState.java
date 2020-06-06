@@ -18,7 +18,7 @@ import java.util.List;
  */
 @CordaSerializable
 @BelongsToContract(VehicleContract.class)
-public class VehicleState implements ContractState {
+public class VehicleState implements ContractState, LinearState {
 
     private final String chasisNumber;
     private final String licensePlateNumber;
@@ -27,13 +27,14 @@ public class VehicleState implements ContractState {
     private final String variant;
     private final String color;
     private final String fuelType;
-
+    private final UniqueIdentifier linearId;
+    //Owner same as Applicant
     public final Party Applicant;
 
 
 
     public VehicleState(String chasisNumber, String licensePlateNumber, String make, String model, String variant,
-                        String color, String fuelType, Party applicant) {
+                        String color, String fuelType, UniqueIdentifier linearId, Party applicant) {
         this.chasisNumber = chasisNumber;
         this.licensePlateNumber = licensePlateNumber;
         this.make = make;
@@ -41,6 +42,7 @@ public class VehicleState implements ContractState {
         this.variant = variant;
         this.color = color;
         this.fuelType = fuelType;
+        this.linearId = linearId;
         this.Applicant = applicant;
     }
 
@@ -74,9 +76,20 @@ public class VehicleState implements ContractState {
         return licensePlateNumber;
     }
 
+    @Override
+    public UniqueIdentifier getLinearId() {
+        return linearId;
+    }
+
     @NotNull
     @Override
     public List<AbstractParty> getParticipants() {
         return ImmutableList.of(Applicant);
     }
+
+//    public VehicleState withNewOwner(Party newOwner) {
+//
+//    }
+
+
 }

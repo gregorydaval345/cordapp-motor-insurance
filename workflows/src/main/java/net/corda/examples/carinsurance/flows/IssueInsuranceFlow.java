@@ -41,9 +41,9 @@ public class IssueInsuranceFlow {
             Party insurer = getOurIdentity();
 
             VehicleInfo vehicleInfo = insuranceInfo.getVehicleInfo();
-            VehicleState vehicleState = new VehicleState(vehicleInfo.getRegistrationNumber(),
+            VehicleState vehicleState = new VehicleState(
                     vehicleInfo.getChasisNumber(), vehicleInfo.getLicensePlateNumber(), vehicleInfo.getMake(), vehicleInfo.getModel(),
-                    vehicleInfo.getVariant(), vehicleInfo.getColor(), vehicleInfo.getFuelType());
+                    vehicleInfo.getVariant(), vehicleInfo.getColor(), vehicleInfo.getFuelType(), vehicleInfo.getLinearId() , vehicleInfo.getApplicant());
 
             // Build the insurance output state.
             InsuranceState insurance = new InsuranceState(insuranceInfo.getPolicyNumber(), insuranceInfo.getInsuredValue(),

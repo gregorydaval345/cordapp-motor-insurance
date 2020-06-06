@@ -1,0 +1,12 @@
+
+   ______               __
+  / ____/     _________/ /___ _
+ / /     __  / ___/ __  / __ `/         Cats spend two thirds of their lives sleeping
+/ /___  /_/ / /  / /_/ / /_/ /          and the other third making viral videos.
+\____/     /_/   \__,_/\__,_/
+
+--- Corda Open Source 4.4 (21e8c4f) -------------------------------------------------------------
+
+
+Logs can be found in                    : /Users/davalgregory/development/queryablestate-carinsurance/build/nodes/TAJ/logs
+Database connection url is              : jdbc:h2:tcp://localhost:20047/node

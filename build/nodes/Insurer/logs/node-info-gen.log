@@ -1,0 +1,12 @@
+
+   ______               __
+  / ____/     _________/ /___ _
+ / /     __  / ___/ __  / __ `/         I named my dog 'Six Miles' so I can tell
+/ /___  /_/ / /  / /_/ / /_/ /          people I walk Six Miles every day.
+\____/     /_/   \__,_/\__,_/
+
+--- Corda Open Source 4.4 (21e8c4f) -------------------------------------------------------------
+
+
+Logs can be found in                    : /Users/davalgregory/development/queryablestate-carinsurance/build/nodes/Insurer/logs
+Database connection url is              : jdbc:h2:tcp://localhost:20041/node
